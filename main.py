@@ -63,6 +63,7 @@ async def search(bot, update):
         reply_markup = InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton(text="Watch Video 📹", url=result["link"])]
+                [InlineKeyboardButton(text=result["channel_name"], url=result["channel_link"])]
             ]
         )
         try:
